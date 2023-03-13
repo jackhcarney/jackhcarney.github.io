@@ -1,0 +1,141 @@
+@import url();
+body {
+    background-color: black;
+    color: white;
+    margin: 60pt auto;
+    width: 600pt;
+    max-width: 85vw;
+    font-weight: 300;
+}
+
+body.wide {
+    margin: 60pt auto;
+    width: 1000pt;
+    max-width: 85vw;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 12pt;
+}
+
+pre, code {
+    font-family: 'Fira Mono', monospace;
+}
+
+pre code {
+    overflow-x: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #07705B;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 20pt;
+}
+
+#title h1 {
+    font-weight: 900;
+    font-size: 30pt;
+}
+
+#post p img {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+#post .caption {
+    border: 1px solid #CCC;
+    border-left: 5px solid black;
+    padding: 2px;
+    text-align: center;
+    font-size: 11pt;
+    font-style: italic;
+}
+
+.blog-box {
+    margin: 30pt 0;
+}
+
+.blog-box .post {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 10pt 0;
+}
+
+.blog-box .post .name {
+    font-weight: bold;
+    margin-right: 10pt;
+}
+
+.blog-box .post .date {
+    font-size: 10pt;
+    text-align: right;
+}
+
+.project-box {
+    columns: 200pt;
+    column-gap: 60pt;
+    -webkit-column-break-inside: avoid;
+              page-break-inside: avoid;
+                   break-inside: avoid;
+}
+
+.project {
+    display: inline-block; /* This prevents splitting up the block */
+    width: 100%;
+}
+
+.proj-label {
+    font-size: 15pt;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.proj-label * {
+    margin: 0;
+}
+
+.proj-label .lang {
+    font-size: 10pt;
+}
+
+.project label {
+    display: block;
+}
+
+.project label .proj-desc-checkbox:checked ~ .proj-desc > * {
+    display: none;
+}
+
+.project label .proj-desc-checkbox:checked ~ .proj-desc > *:first-child {
+    display: inherit;
+}
+
+.project label .proj-desc-checkbox:checked ~ .proj-desc::after {
+    content: "more...";
+    color: #07705B;
+    font-size: 10pt;
+    position: relative;
+    top: -10pt;
+    left: 2pt;
+    cursor: pointer;
+}
